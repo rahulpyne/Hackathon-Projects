@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Projection by TEMPLATED</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+</head>
+<body class="subpage">
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+            <a href="index.html" class="logo"><strong>Projection</strong> by TEMPLATED</a>
+        </div>
+    </header>
+    <section id="three" class="wrapper">
+        <div class="inner">
+            <header>
+                <h2>Additional Information</h2>
+                <div >
+                    <form id="user-details" role="form" method="POST">{% csrf_token %}
+                        <fieldset>
+                        <div class="row uniform center">
+                            <div class="6u"><p>Budget :</p></div>
+                            <div class="6u">
+                                <input class="form-control special" placeholder="Budget" name="budget" type="number" />
+                            </div>
+                        </div>
+                        <div class="row uniform center">
+                            <div class="6u"><p>Days :</p></div>
+                            <div class="6u">
+                                <input class="form-control" placeholder="Days" name="days" type="number" />
+                            </div>
+                        </div>
+                        <div class="row uniform center">
+                            <div class="6u"><p>Gender :</p></div>
+                            <div class="3u">
+                                <input type="radio" name="gender" id="male" value="male" checked/> 
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="3u">
+                                <input type="radio" id ="female" name="gender" value="female" checked/> 
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                        <div class="row uniform center">
+                            <div class="6u"><p>Age :</p></div>
+                            <div class="6u">
+                                <input class="form-control" placeholder="Age" name="Age" type="number" />
+                            </div>
+                        </div>
+                        <div class=" 12u row uniform center">
+                           <div class="6u"> <p>Are you a vegetarian?</p></div>
+                           <div class="3u">
+                            <input type="radio" id="veg-yes" name="preference" value="Yes"/>
+                            <label for="veg-yes">Yes</label>
+                        </div>
+                        <div class="3u">
+                            <input type="radio" id="veg-no" name="preference" value="No" checked/> 
+                            <label for="veg-no">No</label>
+                        </div>
+                    </div>
+                    <div class="12u" style='padding: 5%'>
+                        <button href="index.html" class="button special">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </header>
+</div>
+</section>
+</body>
+</html>

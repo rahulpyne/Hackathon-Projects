@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Projection by TEMPLATED</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type = 'text/css'/>
+</head>
+<body class="subpage">
+        <!-- Header -->
+            <header id="header">
+                <div class="inner">
+                    <a href="index.html" class="logo"><strong>Projection</strong> by TEMPLATED</a>
+                </div>
+            </header>
+		{% block content %}
+			{% for meal_combo in list_of_content%}
+				<p>{{meal_combo}}<p>
+			{% endfor %}
+		{% endblock %}
+</body>
+</html>
