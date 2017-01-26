@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-# Create your models here.
+# Meals Table with all the items
 class Meals(models.Model):
     item_id = models.CharField(max_length=50,null =True)
     brand_id = models.CharField(max_length=50, null = True)
