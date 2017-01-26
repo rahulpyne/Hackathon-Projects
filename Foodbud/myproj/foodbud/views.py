@@ -29,8 +29,7 @@ def initialInfo(request):
             else:
                 break
         calories_fit_combos=[] # will maintain only those combos which are within the calorie range.
-        print request.POST.get('Age','').encode('utf8')
-        print request.POST.get('gender','').encode('utf8')
+        
         for value in set_of_food_combos:
             if(valid_calories(request.POST.get('gender','').encode('utf8'),int(request.POST.get('Age','')),value,calories_item)):
                 calories_fit_combos.append(value)
